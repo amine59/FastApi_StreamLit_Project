@@ -18,10 +18,10 @@ class IrisSpecies(BaseModel):
     sepal_width: float
     petal_length: float
     petal_width: float
-
+#C:/Users/client/Desktop/Amaris\
 class IrisModelRandomForest:
     def __init__(self):
-        self.df = pd.read_csv('C:/Users/client/Desktop/Amaris\iris.csv')
+        self.df = pd.read_csv('iris.csv')
         self.model_fname_ = 'iris_model.pkl'
         try:
             self.model = joblib.load(self.model_fname_)
@@ -44,7 +44,7 @@ class IrisModelRandomForest:
 
 class IrisModelLogisticRegression:
     def __init__(self):
-        self.df = pd.read_csv('C:/Users/client/Desktop/Amaris\iris.csv')
+        self.df = pd.read_csv('iris.csv')
         self.model_fname_ = 'iris_model.pkl'
         try:
             self.model = joblib.load(self.model_fname_)
@@ -73,7 +73,7 @@ class IrisModelLogisticRegression:
 
 class DecisionTreeClassifier:
     def __init__(self):
-        self.df = pd.read_csv('C:/Users/client/Desktop/Amaris\iris.csv')
+        self.df = pd.read_csv('iris.csv')
         self.model_fname_ = 'iris_model.pkl'
         try:
             self.model = joblib.load(self.model_fname_)
@@ -103,7 +103,7 @@ class DecisionTreeClassifier:
 
 class SupportVectorMachines:
     def __init__(self):
-        self.df = pd.read_csv('C:/Users/client/Desktop/Amaris\iris.csv')
+        self.df = pd.read_csv('iris.csv')
         self.model_fname_ = 'iris_model.pkl'
         try:
             self.model = joblib.load(self.model_fname_)
