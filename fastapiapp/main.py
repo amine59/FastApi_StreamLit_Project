@@ -1,7 +1,8 @@
 # 1. Library imports
 import uvicorn
-from fastapi import FastAPI
-from model import IrisModelRandomForest, IrisModelLogisticRegression, DecisionTreeClassifier,SupportVectorMachines, IrisSpecies
+from fastapi import FastAPI, File
+
+from algo import IrisModelRandomForest, IrisModelLogisticRegression, DecisionTreeClassifier,SupportVectorMachines, IrisSpecies
 #test
 app = FastAPI()
 model = IrisModelRandomForest()

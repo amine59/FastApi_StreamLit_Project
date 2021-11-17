@@ -40,7 +40,7 @@ class stream_lit:
                 st.success(f"The prediction from Logistic Regression : {self.prediction}")
 
             elif self.chosen_classifier == 'Random Forest':
-                self.req = requests.post("http://127.0.0.1:8000/predictRandomForest", json=self.data)
+                self.req = requests.post("http://127.0.0.1:8000/predictRandomForest", timeout=8000)
                 self.prediction = self.req.text
                 st.success(f"The prediction from Random Forest: {self.prediction}")
 

@@ -1,10 +1,24 @@
-version: '3.9'
+version: '3'
 
 services:
-  web:
-    build: .
-    command: uvicorn main:app --host 0.0.0.0
-    volumes:
-      - .:/app
+  fastapi:
+    build: fastapiapp/
     ports:
       - 8000:8000
+    networks:
+      - deploy_network
+    container_name: fastapiapp
+
+  streamlit:
+    build: streamlit/
+    depends_on:
+      - fastapi
+    ports:
+        - 8501:8501
+    networks:
+      - deploy_network
+    container_name: streamlit
+
+networks:
+  deploy_network:
+    driver: bridge
